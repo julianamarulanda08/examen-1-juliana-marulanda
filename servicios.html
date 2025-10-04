@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos y Mantenimiento - AutoFix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo img {
+            margin-left: 20px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a.active, nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: url('car-repair.jpg') no-repeat center center/cover;
+            color: #fff;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: rgb(206, 14, 14);
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: rgb(0, 0, 0);
+        }
+        .btn {
+            background-color:rgb(206, 14, 14) ;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        section {
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+    
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .testimonios blockquote {
+            background-color: #e2e2e2;
+            padding: 15px;
+            border-left: 5px solid #ff0000;
+        }
+        .contacto form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #000000;
+            color: #e2e2e2;
+        }
+    </style>
+    <!-- Encabezado -->
+    <header>
+<section class="navegador">
+   <nav class="navbar">
+    <img src="img/logo.png" Logo" class="logo" width="70" height="100">
+    <br>
+    <br>
+    <br>
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="Vehiculos.html">Vehiculos</a></li>
+      <li><a href="servicios.html"class="active">Servicios</a>
+      <li><a href="Nosotros.html">Nosotros</a></li>
+      <li><a href="Contactanos.html">Contacto</a></li>
+      </ul>
+   </nav>         
+</section>
+</header>
+
+    <!-- Portada -->
+    <section class="hero">
+        <h1>Servicios de Reparacion y Mantenimiento</h1>
+        <p>Cuidamos tu vehículo con la mejor tecnología y personal especializado.</p>
+        <a href="#servicios" class="btn">Ver Servicios</a>
+    </section>
+
+    <!-- Sección de servicios -->
+    <section id="servicios">
+        <br>
+        <h2>Nuestros Servicios</h2>
+        <br>
+        <div class="grid">
+            <div class="card">
+                <h3>Mecánica General</h3>
+                <p>Reparación de motor, frenos, suspensión y todos los sistemas de tu auto.</p>
+            </div>
+            <br>
+            <div class="card">
+                <h3>Diagnóstico Computarizado</h3>
+                <p>Identificamos fallas electrónicas con equipos de última generación.</p>
+            </div>
+            <br>
+            <div class="card">
+                <h3>Servicio de Frenos</h3>
+                <p>Mantenimiento, cambio de pastillas y revisión de discos para tu seguridad.</p>
+            </div>
+            <br>
+            <div class="card">
+                <h3>Electricidad Automotriz</h3>
+                <p>Revisión y reparación de sistemas eléctricos y electrónicos.</p>
+            </div>
+            <br>
+            <div class="card">
+                <h3> Tu vehículo, tu asistente personal.</h3>
+                <p>Ofrece navegación inteligente, control por voz, diagnósticos en tiempo real y conexión total con tu estilo de vida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <blockquote>
+            <p>"Llevé mi carro y quedó como nuevo, el servicio fue rápido y profesional."</p>
+            <cite>- Juan Pérez</cite>
+        </blockquote>
+        <blockquote>
+            <p>"Muy buena atención, explican todo y los precios son justos."</p>
+            <cite>- María Gómez</cite>
+        </blockquote>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section class="contacto">
+        <h2>Agenda tu cita</h2>
+        <form action="enviar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="mensaje">Descripción del problema:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar solicitud</button>
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Automotores TOYOTA - Todos los derechos reservados</p>
+        <p>Tel: +57 310 000 0000 | Email: TOYOTA@autoland.com</p>
+    </footer>
+</body>
+</html>

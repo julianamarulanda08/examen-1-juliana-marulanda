@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contáctanos</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+  body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: black;
+  padding: 1em;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contacto {
+  padding: 2em;
+  text-align: center;
+}
+
+.contacto h1 {
+  color: red;
+}
+
+.formulario {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.5em;
+  border: 1px solid black;
+}
+
+.formulario button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.7em;
+  cursor: pointer;
+}
+
+.mapa {
+  padding: 13%;
+  margin-right: 70px;
+  text-align: center;
+
+}
+
+.mapa h2 {
+  color: red;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+</style>
+</head>
+<body>
+ <section class="navegador">
+   <nav class="navbar">
+    <img src="img/logo.png" alt="Logo" class="logo" width="70" height="100">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Vehiculos.html">Vehiculos</a></li>
+      <li><a href="servicios.html">servicios</a></li>
+      <li><a href="Nosotros.html">Nosotros</a></li>
+      <li><a href="Contactanos.html" class="active">Contacto</a></li>
+      </ul>
+  </nav>         
+</section>
+
+
+
+  <section class="mapa">
+    <h2>Nuestra oficina principal</h2>
+    <div class="mapa-contenedor">
+      <!-- Aquí puedes insertar un iframe de Google Maps -->
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.430371768418!2d-75.59369176626205!3d6.216484373511502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429d2a29fc9a7%3A0xe0675322120ed33!2sToyota%20Tuyomotor%20El%20Poblado!5e0!3m2!1ses-419!2sco!4v1759472023710!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+    </div>
+  </section>
+
+  <section class="contacto">
+    <h1>Contactanos</h1>
+    <form class="formulario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
